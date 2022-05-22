@@ -40,7 +40,8 @@ namespace RunMiddleWareHW
         {
             app.Run(async context =>
             {
-                await context.Response.WriteAsync("Hello from Run-middleware");
+                DateTime dateTime = DateTime.Now;
+                await context.Response.WriteAsync("rotem - " + dateTime.Hour + ":" + dateTime.Minute + ":" + dateTime.Second);
             });
 
             if (env.IsDevelopment())
